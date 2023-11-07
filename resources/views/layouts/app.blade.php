@@ -20,8 +20,8 @@
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" >
+                <header>
+                    <div class="font-bold text-lg max-w-7xl mx-auto py-6 px-8 sm:px-8 lg:px-12" >
                         PICK UP!
                     </div>
                 </header>
