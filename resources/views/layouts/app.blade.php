@@ -15,17 +15,9 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen bg-white-100">
             @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header>
-                    <div class="font-bold text-lg max-w-7xl mx-auto py-6 px-8 sm:px-8 lg:px-12" >
-                        PICK UP!
-                    </div>
-                </header>
-            @endif
 
             <!-- Page Content -->
             <main>
