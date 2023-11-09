@@ -53,11 +53,11 @@
             slideIndex = 1;
         }
         slides[slideIndex - 1].style.display = "flex";
-        fade(slides[slideIndex - 1], 0, 1, 3000); // 4000ミリ秒かけてフェードイン
+        fade(slides[slideIndex - 1], 0, 1, 2000); // 4000ミリ秒かけてフェードイン
         setTimeout(function() {
-            fade(slides[slideIndex - 1], 1, 0, 4000); // 4000ミリ秒かけてフェードアウト
+            fade(slides[slideIndex - 1], 1, 0, 2000); // 4000ミリ秒かけてフェードアウト
         }, 6000); // スライドが表示される時間
-        setTimeout(showSlides, 12000); // スライドが切り替わる時間
+        setTimeout(showSlides, 10000); // スライドが切り替わる時間
     }
 
     function fade(element, startOpacity, endOpacity, duration) {

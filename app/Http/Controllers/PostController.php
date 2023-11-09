@@ -20,6 +20,7 @@ class PostController extends Controller
         return view('posts.index', compact('posts'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      */
