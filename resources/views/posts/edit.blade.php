@@ -31,6 +31,13 @@
                 <img src="{{ $post->image_url }}" alt="" class="mb-4 md:w-2/5 sm:auto">
                 <input type="file" name="image" class="border-gray-300">
             </div>
+            <label class="block text-gray-700 text-sm mb-2" for="price">
+                料金
+            </label>
+            <input type="number" name="price"
+                class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full py-2 px-3"
+                required placeholder="料金" value="{{ old('price', $post->price) }}">
+
             <input type="submit" value="更新"
                 class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
         </form>
