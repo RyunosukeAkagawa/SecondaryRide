@@ -22,14 +22,18 @@ class StoreCommentRequest extends FormRequest
     public function rules(): array
     {
         return [
-             'body' => 'required|string|max:200',
+            //  'body' => 'required|string|max:200',
+            'datetime' => 'required|date',
+            // 'opt1' => 'required|integer',
+            // 'opt2' => 'required|integer',
+            // 'total' => 'required|integer',
         ];
     }
 
-    public function attributes()
-    {
-        return [
-            'body' => 'コメント',
-        ];
-    }
+    // public function attributes()
+    // {
+    //     return [
+    //         'body' => 'コメント',
+    //     ];
+    // }
 }

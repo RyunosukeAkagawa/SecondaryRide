@@ -5,11 +5,11 @@
         <h2 class="font-bold font-sans break-normal text-gray-900 pt-6 pb-1 text-3xl md:text-4xl break-words mb-3">
             {{ $post->title }}</h2>
             <article class="mb-2 flex">
-                <p class="text-gray-700 items-end pt-3 pr-3">{!! nl2br(e($post->body)) !!} <br>
+                <p class="text-gray-700 items-end w-1/2 pt-3 pr-3">{!! nl2br(e($post->body)) !!} <br>
                 <br>
-                料金：大更駅発{{ $post->price }}円
+                料金：大更駅発  {{ $post->price }}円
                 </p>
-                <img src="{{ $post->image_url }}" alt="" class="mb-4 max-w-lg">
+                <img src="{{ $post->image_url }}" alt="" class="w-1/2 mb-4 max-w-lg">
             </article>
         
         <div class="flex flex-row text-center my-4">
@@ -30,7 +30,7 @@
         @auth
             <hr class="my-4">
 
-            <div class="flex justify-end">
+            <div class="flex">
                 <a href="{{ route('posts.comments.create', $post) }}"
                     class="bg-indigo-400 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline block">コメント登録</a>
             </div>

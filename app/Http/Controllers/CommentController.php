@@ -43,7 +43,7 @@ class CommentController extends Controller
 
         return redirect()
             ->route('posts.show', $post)
-            ->with('notice', 'コメントを登録しました');
+            ->with('notice', '予約が完了しました');
     }
 
     /**

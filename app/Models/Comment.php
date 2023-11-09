@@ -10,7 +10,10 @@ class Comment extends Model
     use HasFactory;
 
     protected $fillable = [
-        'body',
+        'option1',
+        'option2',
+        'datetime',
+        'total',
     ];
 
     public function user()
