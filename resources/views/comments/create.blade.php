@@ -3,11 +3,13 @@
         <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
 
             <div class="absolute inset-0">
-                <iframe width="50%" height="50%" frameborder="0" marginheight="0" marginwidth="0" title="map"
+                <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map"
                     scrolling="no"
-                    src="{{ $post->image_url }}?width=100%&amp;height=100%&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                    src="{{ $post->image_url }}"
                     style="filter: none;"></iframe>
             </div>
+
+            
             <x-validation-errors :errors="$errors" />
             <div class="container px-5 py-24 mx-auto flex">
             <form action="{{ route('posts.comments.store', $post) }}" method="POST"
@@ -19,14 +21,15 @@
                     <input type="datetime-local" name="datetime" value=" {{ old('datetime') }}"
                         class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                 </div>
+
                 <div class="relative mb-4">
                     <label for="name" class="leading-7 text-sm text-gray-600">オプションメニュー</label>
                     <p class="flex items-center text-gray-600 mb-2 text-sm">
-                        <input type="radio" id="opt1" name="opt1" class="mr-2">
+                        <input type="checkbox" id="opt1" name="opt1" class="mr-2">
                         <label for="opt1">無人販売所に寄り道：500円</label>
                     </p>
                     <p class="flex items-center text-gray-600 mb-2 text-sm">
-                        <input type="radio" id="opt2" name="opt2" class="mr-2">
+                        <input type="checkbox" id="opt2" name="opt2" class="mr-2">
                         <label for="opt2">ガイド依頼：1000円</label>
                     </p>
                 </div>
