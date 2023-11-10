@@ -24,7 +24,7 @@
 
     <p class="text-center p-5 text-xl font-bold">PICK UP</p>
 
-    <div class="container max-w-7xl mx-auto px-4 md:px-12 pb-3 mt-3">
+    <div class="container max-w-7xl mx-auto px-4 md:px-12 pb-3 mt-3 bg-cover bg-center" style="background-image: url()">
         <div class="slideshow-container">
             @foreach ($posts as $post)
                 <article class="mySlides w-full px-4 md:w-1/2 text-xl text-gray-800 leading-normal" style="display: none;">

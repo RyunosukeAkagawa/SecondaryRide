@@ -10,8 +10,8 @@ class Comment extends Model
     use HasFactory;
 
     protected $fillable = [
-        'option1',
-        'option2',
+        'opt1',
+        'opt2',
         'datetime',
         'total',
     ];
