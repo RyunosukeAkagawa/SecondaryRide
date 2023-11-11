@@ -1,42 +1,51 @@
 <x-app-layout>
     <style>
         .slideshow-container {
-            display: flex;
             overflow: hidden;
-            width: 100%;
-            justify-content: center;
+            /* width: 100%; */
         }
 
         .mySlides {
-            flex: 0 0 100%;
-            max-width: 80%;
-            display: flex;
-            justify-content: center;
+            /* flex: 0 0 100%; */
+            /* max-width: 80%; */
+
             opacity: 0;
             transition: opacity 2s ease;
         }
 
         .mySlides img {
-            width: 100%;
+            /* width: 100%; */
             height: auto;
         }
     </style>
 
-    <p class="text-center p-5 text-xl font-bold">PICK UP</p>
+    <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-32 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2  lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 class="title-font sm:text-3xl text-3xl mb-4 font-bold text-blue-900">ABOUT.
+                </h1>
+                <p class="leading-relaxed text-xl mb-1">SecondryRideに登録することで、地方の観光スポットへ手軽にアクセスできるようになります。</p>
+                <div class="flex justify-center sm:flex text-blue-900">
+                    <x-nav-link class="text-lg" :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        使ってみる
+                    </x-nav-link>
+                </div>
+            </div>
 
-    <div class="container max-w-7xl mx-auto px-4 md:px-12 pb-3 mt-3 bg-cover bg-center" style="background-image: url()">
-        <div class="slideshow-container">
-            @foreach ($posts as $post)
-                <article class="mySlides w-full px-4 md:w-1/2 text-xl text-gray-800 leading-normal" style="display: none;">
-                    <a href="{{ route('posts.show', $post) }}">
-                        <p class="text-sm mb-2 md:text-base font-normal text-gray-600"></p>
-                        <img src="{{ $post->image_url }}" alt="">
-                        <p class="text-gray-700 text-base">{{ Str::limit($post->body, 50) }}</p>
-                    </a>
-                </article>
-            @endforeach
+            <div class="slideshow-container">
+                @foreach ($posts as $post)
+                    <article class="mySlides lg:max-w-2xl lg:w-full md:w-1/2 w-5/6">
+                        <a href="{{ route('posts.show', $post) }}">
+                            <img src="{{ $post->image_url }}" alt="img" class="object-cover object-center rounded">
+                        </a>
+                    </article>
+                @endforeach
+            </div>
+
+
         </div>
-    </div>
+    </section>
 </x-app-layout>
 
 <script>
@@ -62,6 +71,7 @@
 
     function fade(element, startOpacity, endOpacity, duration) {
         var startTime = null;
+
         function animate(currentTime) {
             if (!startTime) startTime = currentTime;
             var elapsed = currentTime - startTime;
