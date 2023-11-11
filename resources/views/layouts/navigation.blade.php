@@ -1,7 +1,7 @@
 <nav x-data="{ open: false }" class="bg-white">
     <!-- Primary Navigation Menu -->
     <div class="container mx-auto flex flex-wrap flex-col items-center">
-        <div class="flex py-4 space-x-4 h-16 bg-white w-full">
+        <div class="flex py-4 space-x-4 h-20 bg-white w-full">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">

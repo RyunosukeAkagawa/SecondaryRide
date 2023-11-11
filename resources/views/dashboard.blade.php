@@ -12,7 +12,7 @@
                     <div class="p-4 md:w-1/3">
                         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                             <a href="{{ route('posts.show', $post) }}">
-                            <img class="lg:h-48 md:h-36 w-full object-cover object-center hover:scale-105 transition duration-300 ease-in-out"
+                            <img class="lg:h-52 md:h-36 w-full object-cover object-center hover:scale-105 transition duration-300 ease-in-out"
                                 src="{{ $post->image_url }}" alt="blog">
                             </a>
                             <div class="p-6">
