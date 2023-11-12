@@ -5,14 +5,14 @@
             <x-validation-errors :errors="$errors" />
             <form action="{{ route('posts.comments.store', $post) }}" method="POST"
                 class="lg:w-1/3 md:w-1/2 flex flex-col bg-gray-50 md:mx-auto w-full rounded md:p-8 mt-8 md:mt-0">
-                <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">ご予約フォーム</h2>
+                <h2 class="text-gray-900 text-xl mb-2 font-medium title-font">ご予約フォーム</h2>
                 @csrf
-                <div class="relative mb-4">
+                <div class="relative mb-6">
                     <label for="datetime" class="leading-7 text-sm text-gray-600">予約日時</label>
                     <input type="datetime-local" name="datetime" value=" {{ old('datetime') }}"
                         class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                 </div>
-                <div class="relative mb-4">
+                <div class="relative mb-6">
                     <label for="name" class="leading-7 text-sm text-gray-600">オプションメニュー</label>
                     <p class="flex items-center text-gray-600 mb-2 text-sm">
                         <input type="radio" id="opt1" name="opt1" class="mr-2">
@@ -23,7 +23,7 @@
                         <label for="opt2">ガイド依頼：1000円</label>
                     </p>
                 </div>
-                <div class="relative mb-4">
+                <div class="relative mb-6">
                     <p id="total" name="total" class="text-md text-gray-600"></p>
                 </div>
                 <input type="submit" value="この内容で予約する"
